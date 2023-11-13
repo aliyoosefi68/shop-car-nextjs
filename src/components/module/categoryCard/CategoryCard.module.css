@@ -1,0 +1,26 @@
+.card {
+  box-shadow: #dfae7640 0px 4px 15px;
+  /* border: 2px solid #304ffe; */
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 10px;
+  transition: all ease-in 0.1s;
+  margin: 10px 0;
+}
+
+.card:hover {
+  transform: rotate(-1deg);
+}
+
+.card img {
+  border-radius: 10px !important;
+  object-fit: cover;
+}
+
+.card p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #dfae76;
+  text-align: center;
+  margin: 10px 0 5px;
+}

@@ -1,0 +1,17 @@
+.submit {
+  border: none;
+  padding: 10px 20px;
+  background-color: #dfae76;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submit div {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.submit div svg {
+  font-size: 20px;
+}

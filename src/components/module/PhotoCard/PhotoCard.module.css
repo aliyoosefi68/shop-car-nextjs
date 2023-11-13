@@ -1,0 +1,42 @@
+.container {
+  border-radius: 5px;
+  position: relative;
+  cursor: pointer;
+}
+.checked {
+  position: absolute;
+  right: 5px;
+  top: -10px;
+  z-index: 10;
+  background: #fff;
+  display: flex;
+  border-radius: 50%;
+}
+.checked svg {
+  font-size: 36px;
+  color: #43a047;
+}
+.containerImage {
+  border: 1px solid silver;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.deleteBTN {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  padding: 5px;
+  border: none;
+  background-color: #ef5350;
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  z-index: 1000;
+}

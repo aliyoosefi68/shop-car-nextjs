@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 150px;
+}
+
+.container h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 80px;
+  width: 100%;
+  background-color: #dfae7618;
+  color: #dfae76;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.submit {
+  border: none;
+  background-color: #43a047;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: all ease-in 0.1s;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.submit:hover {
+  transform: scale(1.05);
+}
+
+.teaxtArea {
+  border: 1px dashed #dfae76;
+  border-radius: 10px;
+  margin: 30px 0;
+  overflow: hidden;
+}

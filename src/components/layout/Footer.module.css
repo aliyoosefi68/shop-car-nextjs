@@ -1,0 +1,8 @@
+.container {
+  background-color: #e8dfb0;
+}
+.desc p {
+  padding: 20px;
+  line-height: 2;
+  font-size: 14px;
+}

@@ -1,0 +1,43 @@
+.container {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navBar {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.navBar li a {
+  font-weight: 400;
+  transition: 0.3s;
+  border-bottom: 2px solid transparent;
+}
+.navBar li:hover a {
+  color: #97231a;
+  border-bottom: 2px solid #97231a;
+}
+.signIn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: #dfae76;
+  padding: 5px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.signIn:hover {
+  background-color: #000;
+  color: #dfae76;
+}
+.signIn span {
+  font-weight: 400;
+}
+.signIn svg {
+  font-size: 22px;
+}

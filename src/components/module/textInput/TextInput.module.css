@@ -1,0 +1,27 @@
+.container input,
+.container textarea {
+  margin-bottom: 40px;
+  width: 100%;
+  border: 1px #dfae76 dashed;
+  color: grey;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 1rem;
+  height: 40px;
+}
+
+.container input:focus,
+.container textarea:focus {
+  border: 2px #513b22 solid;
+  outline: none;
+}
+
+.container textarea {
+  height: 100px;
+  resize: none;
+}
+
+.container p {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}

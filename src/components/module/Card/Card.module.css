@@ -1,0 +1,72 @@
+.container {
+  width: 250px;
+  /* border: 2px solid #dfae7658; */
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  transition: 0.3s ease;
+}
+.container:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: translateY(-5px);
+}
+
+.icon svg {
+  font-size: 1.5rem;
+  background-color: #c3c3c358;
+  color: #717171;
+  padding: 3px;
+  border-radius: 5px;
+  display: flex;
+}
+
+.title {
+  font-weight: 400;
+  text-align: center;
+}
+
+.location {
+  display: flex;
+  color: grey;
+  font-size: 0.9rem;
+}
+
+.location svg {
+  margin-left: 5px;
+  font-size: 1rem;
+}
+
+.container span {
+  color: grey;
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+.container a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: #760e09;
+  background-color: #760e0910;
+  padding: 3px;
+  border-radius: 3px;
+}
+
+.container a svg {
+  font-size: 1.2rem;
+}
+.details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  text-align: center;
+}
