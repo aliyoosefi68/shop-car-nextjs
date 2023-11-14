@@ -1,6 +1,6 @@
 import Profile from "@/models/Profile";
+import DetailsPage from "@/template/DetailesPage/DetailsPage";
 import connectDB from "@/utils/connectDB";
-import React from "react";
 
 const Detailes = async ({ params: { profileId } }) => {
   await connectDB();
@@ -9,7 +9,11 @@ const Detailes = async ({ params: { profileId } }) => {
 
   if (!profile) return <h3>مشکلی پیش آمده است</h3>;
 
-  return <div>detailes</div>;
+  return (
+    <div style={{ maxWidth: "1200px", margin: "10px auto" }}>
+      <DetailsPage data={profile} />
+    </div>
+  );
 };
 
 export default Detailes;
