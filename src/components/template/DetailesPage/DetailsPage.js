@@ -10,8 +10,24 @@ import { BsCalendarDate } from "react-icons/bs";
 import { e2p, sp } from "@/utils/replaceNumber";
 import Image from "next/image";
 import Title from "@/module/Title/Title";
+import ItemList from "@/module/itemList/ItemList";
+import ShareButton from "@/module/shareButton/ShareButton";
 
-const DetailsPage = ({ data: { title, image, milage, desc, amenities } }) => {
+const DetailsPage = ({
+  data: {
+    title,
+    image,
+    milage,
+    desc,
+    amenities,
+    rules,
+    Myseller,
+    phone,
+    price,
+    category,
+    constructionDate,
+  },
+}) => {
   return (
     <div className={styles.container}>
       <div className={styles.main}>
@@ -27,17 +43,37 @@ const DetailsPage = ({ data: { title, image, milage, desc, amenities } }) => {
         <Title>توضیحات</Title>
         <p>{desc}</p>
         <Title>امکانات</Title>
-        {amenities.length ? (
-          <ul>
-            {amenities.map((amenity, index) => (
-              <li key={index}>{amenity}</li>
-            ))}
-          </ul>
-        ) : (
-          <p>هیچ موردی ذکر نشده است</p>
-        )}
+        <ItemList data={amenities} />
+
+        <Title>قوانین</Title>
+        <ItemList data={rules} />
       </div>
-      <div className={styles.sidebar}>side</div>
+      <div className={styles.sidebar}>
+        <div className={styles.realState}>
+          <p>فروشنده : {Myseller}</p>
+          <span>
+            {e2p(phone)}
+            <FaPhone />
+          </span>
+        </div>
+
+        <ShareButton />
+
+        <div className={styles.price}>
+          <p>
+            دسته بندی:
+            {category}
+          </p>
+          <p>
+            {sp(price)}
+            تومان
+          </p>
+          <p>
+            <BsCalendarDate />
+            {new Date(constructionDate).toLocaleDateString("fa-IR")}
+          </p>
+        </div>
+      </div>
     </div>
   );
 };

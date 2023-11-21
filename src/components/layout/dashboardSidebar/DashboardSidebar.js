@@ -5,22 +5,24 @@ import { AiOutlineProfile, AiOutlineCar } from "react-icons/ai";
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { RiUserSettingsLine } from "react-icons/ri";
 
-import { getServerSession } from "next-auth";
-import { authOptions } from "@/app/api/auth/[...nextauth]/route";
 import LogoutButton from "@/module/exitButton/LogoutButton";
 
-const DashboardSidebar = async ({ children }) => {
-  const session = await getServerSession(authOptions);
+import { FiUserCheck } from "react-icons/fi";
+
+const DashboardSidebar = async ({ children, session, role }) => {
   return (
     <div className={styles.container}>
       <div className={styles.sidebar}>
         <CgProfile />
+
+        {role === "ADMIN" && "مدیر سایت"}
         <p>{session?.user.email}</p>
         <span></span>
         <Link href="/dashboard">
           <AiOutlineProfile className={styles.sidebarLink} />
           حساب کاربری
         </Link>
+
         <Link href="/dashboard/personal">
           <RiUserSettingsLine className={styles.sidebarLink} />
           اطلاعات کاربری{" "}
@@ -33,6 +35,14 @@ const DashboardSidebar = async ({ children }) => {
           <IoIosAddCircleOutline className={styles.sidebarLink} />
           افزودن آگهی
         </Link>
+        {role !== "ADMIN" ? (
+          ""
+        ) : (
+          <Link href="/dashboard/admin">
+            <FiUserCheck className={styles.sidebarLink} />
+            در انتظار تایید{" "}
+          </Link>
+        )}
 
         <LogoutButton />
       </div>

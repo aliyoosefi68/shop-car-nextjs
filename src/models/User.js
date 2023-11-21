@@ -9,6 +9,10 @@ const userSchema = new Schema({
     type: String,
     requierd: true,
   },
+  role: {
+    type: String,
+    default: "USER",
+  },
   name: {
     type: String,
   },

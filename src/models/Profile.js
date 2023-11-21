@@ -50,6 +50,10 @@ const profileSchema = new Schema(
       type: Schema.Types.ObjectId,
       ref: "Usercar",
     },
+    published: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,
