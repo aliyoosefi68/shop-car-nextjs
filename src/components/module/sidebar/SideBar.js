@@ -17,12 +17,13 @@ const SideBar = () => {
       </p>
       <Link href="/buy-residential">همه</Link>
 
-      {queries.map((item) => (
+      {queries.map((item, index) => (
         <Link
           href={{
             pathname: "/buy-residential",
             query: { cat: Object.keys(item) },
           }}
+          key={index}
         >
           {Object.values(item)}
         </Link>
